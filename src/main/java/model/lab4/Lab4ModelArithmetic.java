@@ -27,9 +27,16 @@ public class Lab4ModelArithmetic extends AbstractModel {
         return String.valueOf(factorial(number));
     }
 
-    private int factorial(int n)
+    private int factorialRec(int n)
     {
         if (n == 0) return 1;
         return n * factorial(n-1);
+    }
+    private int factorial(int n){
+        int result = 1;
+        for (int i = 1; i <=n; i ++){
+            result = result*i;
+        }
+        return result;
     }
 }
