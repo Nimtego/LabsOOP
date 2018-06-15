@@ -9,8 +9,8 @@ import java.io.InputStreamReader;
 
 public abstract class AbstractView implements CommonView{
 
-    protected Presenter presenter;
-    protected BufferedReader bf;
+    private Presenter presenter;
+    private BufferedReader bf;
 
     public AbstractView() {
         this.presenter = setPresenter();

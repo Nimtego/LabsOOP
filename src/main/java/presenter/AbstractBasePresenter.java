@@ -5,8 +5,8 @@ import model.LabsHandler;
 import view.AbstractView;
 
 public abstract class AbstractBasePresenter<T extends AbstractView> implements Presenter<T> {
-    protected T commonView;
-    protected LabsHandler labsHandler;
+    T commonView;
+    LabsHandler labsHandler;
 
     public AbstractBasePresenter(LabsHandler labsHandler) {
         this.labsHandler = labsHandler;
