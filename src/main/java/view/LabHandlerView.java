@@ -1,6 +1,6 @@
 package view;
 
-import presenter.LabHandlerPresenter;
+import presenter.LabPresenter;
 import presenter.Presenter;
 
 /**
@@ -11,11 +11,6 @@ public class LabHandlerView extends AbstractView {
 
     @Override
     public Presenter setPresenter() {
-        return new LabHandlerPresenter();
-    }
-
-    @Override
-    protected String setDescription() {
-        return "Starting view";
+        return new LabPresenter();
     }
 }

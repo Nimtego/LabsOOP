@@ -11,16 +11,15 @@ public abstract class AbstractView implements CommonView{
 
     protected Presenter presenter;
     protected BufferedReader bf;
-    protected String description;
 
     public AbstractView() {
         this.presenter = setPresenter();
-        this.description = setDescription();
         this.presenter.attach(this);
         bf = new BufferedReader(new InputStreamReader(System.in));
     }
 
     public void destroy() {
+        bf = null;
         presenter.detach();
     }
     public final void run() {
@@ -35,10 +34,4 @@ public abstract class AbstractView implements CommonView{
     public String response() throws IOException {
         return bf.readLine();
     }
-    protected abstract String setDescription();
-
-    public String getDescription() {
-        return description;
-    }
-
 }

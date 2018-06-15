@@ -2,6 +2,7 @@ package model.lab1;
 
 import model.AbstractModel;
 
+import static utils.Constant.GREETING;
 import static utils.Constant.LAB_1_QUESTION;
 
 public class Lab1Model extends AbstractModel {
@@ -11,7 +12,7 @@ public class Lab1Model extends AbstractModel {
     }
 
     @Override
-    public String getData() {
-        return request;
+    public String solution(String request) {
+        return GREETING +request;
     }
 }

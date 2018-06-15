@@ -1,9 +1,10 @@
 package utils;
 
-import view.CommonView;
-import view.lab1.Lab1View;
-import view.lab2.Lab2View;
-import view.lab3.Lab3View;
+import model.LabsModel;
+import model.lab1.Lab1Model;
+import model.lab2.Lab2Model;
+import model.lab3.Lab3DaysModel;
+import model.lab4.Lab4ModelArithmetic;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,24 +12,25 @@ import java.util.List;
 
 public class LabsList {
     private static LabsList instance;
-    private List<CommonView> commonViewList;
+    private List<LabsModel> commonViewList;
 
-    private LabsList(List<CommonView> commonViewList) {
+    private LabsList(List<LabsModel> commonViewList) {
         this.commonViewList = commonViewList;
     }
 
     public static LabsList getInstance() {
         if (instance == null) {
-            List<CommonView> commonViews = new ArrayList<>();
-            commonViews.add(new Lab1View());
-            commonViews.add(new Lab2View());
-            commonViews.add(new Lab3View());
+            List<LabsModel> commonViews = new ArrayList<>();
+            commonViews.add(new Lab1Model());
+            commonViews.add(new Lab2Model());
+            commonViews.add(new Lab3DaysModel());
+            commonViews.add(new Lab4ModelArithmetic());
             instance = new LabsList(commonViews);
         }
         return instance;
     }
 
-    public List<CommonView> getCommonViewList() {
+    public List<LabsModel> getCommonViewList() {
         return commonViewList;
     }
 }

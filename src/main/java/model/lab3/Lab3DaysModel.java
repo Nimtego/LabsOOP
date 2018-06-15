@@ -13,13 +13,10 @@ public class Lab3DaysModel extends AbstractModel {
         super(LAB_3_QUESTION);
     }
 
-    @Override
-    public String getData() {
-        return request;
-    }
 
-    public String dayMonth(int dayOfYear) {
-        int count = dayOfYear;
+    @Override
+    public String solution(String dayOfYear) {
+        int count = Integer.parseInt(dayOfYear);
         String dayAndMonth = null;
         for (MonthName m : MonthName.values()) {
             if (count - m.getDays() <= 0) {

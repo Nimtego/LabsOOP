@@ -1,15 +1,15 @@
 package presenter;
 
 
-import model.LabsModel;
+import model.LabsHandler;
 import view.AbstractView;
 
 public abstract class AbstractBasePresenter<T extends AbstractView> implements Presenter<T> {
     protected T commonView;
-    protected LabsModel labsModel;
+    protected LabsHandler labsHandler;
 
-    public AbstractBasePresenter(LabsModel labsModel) {
-        this.labsModel = labsModel;
+    public AbstractBasePresenter(LabsHandler labsHandler) {
+        this.labsHandler = labsHandler;
     }
 
     @Override

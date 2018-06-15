@@ -14,7 +14,7 @@ public class Lab2Model extends AbstractModel {
     }
 
     @Override
-    public String getData() {
+    public String solution(String request) {
         AccountType g = AccountType.CHECKING;
         AccountType p = AccountType.DEPOSIT;
         StringBuilder sb = new StringBuilder();
