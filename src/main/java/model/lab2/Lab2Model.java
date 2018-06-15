@@ -2,6 +2,7 @@ package model.lab2;
 
 import model.AbstractModel;
 
+import static utils.Constant.DESCRIPTION_LAB_2;
 import static utils.Constant.LAB_2_QUESTION;
 
 /**
@@ -9,8 +10,15 @@ import static utils.Constant.LAB_2_QUESTION;
  */
 public class Lab2Model extends AbstractModel {
 
-    public Lab2Model() {
-        super(LAB_2_QUESTION);
+
+    @Override
+    protected String setHeader() {
+        return DESCRIPTION_LAB_2;
+    }
+
+    @Override
+    protected String setQuestion() {
+        return LAB_2_QUESTION;
     }
 
     @Override

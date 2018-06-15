@@ -6,4 +6,5 @@ package model;
 public interface LabsModel {
     String getHeader();
     String solution(String request);
+    String getQuestion();
 }

@@ -30,9 +30,7 @@ public class LabPresenter extends AbstractBasePresenter {
         }
         try {
             LabsModel labsModel = labsHandler.getCurrent();
-            System.out.println(labsModel == null);
-            System.out.println(labsModel.getHeader() == null);
-            commonView.request(labsModel.getHeader());
+            commonView.request(labsModel.getQuestion());
             response = commonView.response();
             commonView.request(labsModel.solution(response));
             labsHandler.clear();

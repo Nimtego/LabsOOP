@@ -2,6 +2,7 @@ package model.lab4;
 
 import model.AbstractModel;
 
+import static utils.Constant.DESCRIPTION_LAB_4;
 import static utils.Constant.LAB_4_QUESTION;
 
 /**
@@ -9,8 +10,15 @@ import static utils.Constant.LAB_4_QUESTION;
  */
 public class Lab4ModelArithmetic extends AbstractModel {
 
-    public Lab4ModelArithmetic() {
-        super(LAB_4_QUESTION);
+
+    @Override
+    protected String setHeader() {
+        return DESCRIPTION_LAB_4;
+    }
+
+    @Override
+    protected String setQuestion() {
+        return LAB_4_QUESTION;
     }
 
     @Override
