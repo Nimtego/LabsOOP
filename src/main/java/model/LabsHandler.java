@@ -11,4 +11,5 @@ public interface LabsHandler {
     LabsModel getCurrent();
     String getHeader();
     void clear();
+    void stCurrentLab(int number);
 }

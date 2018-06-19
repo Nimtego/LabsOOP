@@ -50,6 +50,13 @@ public class SimpleLabsHandler implements LabsHandler{
         current = null;
     }
 
+    @Override
+    public void stCurrentLab(int number) {
+        if (number > labs.size() || number < 0)
+            current = null;
+        current = labs.get(number);
+    }
+
 
     @Override
     public String toString() {

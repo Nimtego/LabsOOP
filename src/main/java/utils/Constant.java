@@ -14,6 +14,6 @@ public class Constant {
     public static final String DESCRIPTION_LAB_2 = "Создание перечисляемого типа";
     public static final String DESCRIPTION_LAB_3 = "Конвертирование числа,\n соответствующего дню года";
     public static final String DESCRIPTION_LAB_4 = "Вычисление факториала";
-    public static final String MAIN_MENU = "Выберите лабораторную работу";
+    public static final String MAIN_MENU = "Выберите лабораторную работу (выход \"q\")";
     public static final String WRONG_NUMBER = "Неверный номер";
 }
