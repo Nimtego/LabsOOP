@@ -26,4 +26,8 @@ public abstract class AbstractModel implements LabsModel {
     public String getQuestion() {
         return question;
     }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
 }

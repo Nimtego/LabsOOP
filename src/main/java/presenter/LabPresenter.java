@@ -2,10 +2,11 @@ package presenter;
 
 import model.LabsModel;
 import model.SimpleLabsHandler;
+import model.lab6.Lab6BankAccount;
 
 import java.io.IOException;
 
-import static utils.Constant.WRONG_RESPONSE;
+import static utils.Constant.*;
 
 /**
  * Created by nimtego_loc on 16.06.2018.
@@ -37,11 +38,23 @@ public class LabPresenter extends AbstractBasePresenter {
             try {
                 LabsModel labsModel = labsHandler.getCurrent();
                 commonView.request(labsModel.getQuestion());
-                response = commonView.response();
+
+                if (labsHandler.getCurrent() instanceof Lab6BankAccount) {
+                    StringBuilder sb = new StringBuilder();
+                    sb.append(commonView.response()).append(FLAG);
+                    ((Lab6BankAccount) labsHandler.getCurrent()).setQuestion(LAB_6_QUESTION_2);
+                    commonView.request(labsModel.getQuestion());
+                    sb.append(commonView.response());
+                    response = String.valueOf(sb);
+                    ((Lab6BankAccount) labsHandler.getCurrent()).setQuestion(LAB_6_QUESTION_1);
+                }
+                else
+                    response = commonView.response();
+
                 commonView.request(labsModel.solution(response));
                 labsHandler.clear();
-            } catch (IOException e) {
-                commonView.request(WRONG_RESPONSE);
+            } catch (IOException | NumberFormatException e ) {
+                commonView.request(WRONG_RESPONSE +" - " +e.getMessage());
             }
         }
 
