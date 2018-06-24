@@ -11,6 +11,7 @@ public class Constant {
     public static final String LAB_5_QUESTION = "Введите строку для запись в файл";
     public static final String LAB_6_QUESTION_1 = "Введите номер аккаунта";
     public static final String LAB_6_QUESTION_2 = "Введите баланс";
+    public static final String LAB_7_QUESTION = "Введите количество фккаунтов";
 
     public static final String WRONG_RESPONSE = "Something's wrong";
     public static final String GREETING = "Hello, ";
@@ -21,6 +22,7 @@ public class Constant {
     public static final String DESCRIPTION_LAB_4 = "Вычисление факториала";
     public static final String DESCRIPTION_LAB_5 = "Чтение и запись из/в файл";
     public static final String DESCRIPTION_LAB_6 = "Банковский счет";
+    public static final String DESCRIPTION_LAB_7 = "Трансфер между банковскими счетами";
 
     public static final String MAIN_MENU = "Выберите лабораторную работу (выход \"q\")";
     public static final String WRONG_NUMBER = "Неверный номер";

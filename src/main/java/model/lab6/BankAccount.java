@@ -10,6 +10,20 @@ public class BankAccount {
     private BigDecimal accBal;
     private AccountType accType;
 
+    public void populate(String balance) throws NumberFormatException {
+        for (int i = 0; i < balance.length(); i++) {
+            if (!Character.isDigit(balance.charAt(i))
+                    && (balance.charAt(i) != '.' && (i != 0 && balance.charAt(i) != '-'))){
+                System.out.println(balance);
+                throw new NumberFormatException("Wrong balance");
+
+            }
+        }
+        this.accNo = 0;
+        this.accBal = new BigDecimal(balance);
+        this.accType = AccountType.CHECKING;
+    }
+
     public void populate(long number, String balance) throws NumberFormatException {
         if (number < 0)
             throw new NumberFormatException();
@@ -28,6 +42,12 @@ public class BankAccount {
 
     public long getAccNo() {
         return accNo;
+    }
+    public void setAccNo(long accNo) {
+        this.accNo = accNo;
+    }
+    public void setAccBal(BigDecimal bigDecimal) {
+        this.accBal = bigDecimal;
     }
 
     public BigDecimal getAccBal() {

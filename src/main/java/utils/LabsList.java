@@ -7,6 +7,7 @@ import model.lab3.Lab3DaysModel;
 import model.lab4.Lab4ModelArithmetic;
 import model.lab5.Lab5ReadingFromFile;
 import model.lab6.Lab6BankAccount;
+import model.lab7.Lab7Transfer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +30,7 @@ public class LabsList {
             commonViews.add(new Lab4ModelArithmetic());
             commonViews.add(new Lab5ReadingFromFile("src\\main\\java\\utils\\test.txt"));
             commonViews.add(new Lab6BankAccount());
+            commonViews.add(new Lab7Transfer());
             instance = new LabsList(commonViews);
         }
         return instance;
